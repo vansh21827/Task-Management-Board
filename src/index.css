@@ -1,0 +1,40 @@
+/* ===========================
+   IMPORTS (Must be first)
+=========================== */
+
+@import "./components/Header.css";
+@import "./components/SearchBar.css";
+@import "./components/AddTask.css";
+@import "./components/TaskBoard.css";
+@import "./components/Column.css";
+@import "./components/TaskCard.css";
+
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    margin:0;
+
+    background:#eef3fb;
+
+    transition:.4s;
+
+}
+
+button {
+    cursor: pointer;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+}

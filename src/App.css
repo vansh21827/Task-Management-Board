@@ -1,0 +1,476 @@
+/* ==========================================================
+   APP LAYOUT
+========================================================== */
+
+.app {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #edf4ff 0%, #f8fbff 50%, #eef2ff 100%);
+    padding: 40px;
+    font-family: "Poppins", sans-serif;
+    animation: fadeIn .6s ease;
+}
+
+/* ==========================================================
+   CONTROLS
+========================================================== */
+
+.controls {
+    max-width: 950px;
+    margin: 45px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+/* ==========================================================
+   BOARD SECTION
+========================================================== */
+
+.board-section {
+    max-width: 1500px;
+    margin: auto;
+}
+
+/* ==========================================================
+   BUTTONS
+========================================================== */
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+    font-family: inherit;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+input,
+select,
+textarea {
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+/* ==========================================================
+   CARDS
+========================================================== */
+
+.card {
+    background: rgba(255,255,255,.75);
+    backdrop-filter: blur(12px);
+    border-radius: 22px;
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ==========================================================
+   SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #7c8cf8;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5d6df3;
+}
+
+/* ==========================================================
+   GLASS EFFECT
+========================================================== */
+
+.glass {
+    background: rgba(255,255,255,.60);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,.4);
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+/* ==========================================================
+   SHADOW UTILITIES
+========================================================== */
+
+.shadow-sm{
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+.shadow-md{
+    box-shadow:0 15px 30px rgba(0,0,0,.12);
+}
+
+.shadow-lg{
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
+}
+
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+.fade-up{
+    animation:fadeUp .5s ease;
+}
+
+.fade-scale{
+    animation:fadeScale .45s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes fadeScale{
+
+    from{
+        opacity:0;
+        transform:scale(.92);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+/* ==========================================================
+   HOVER EFFECTS
+========================================================== */
+
+.hover-card{
+    transition:.35s;
+}
+
+.hover-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 35px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================================
+   TEXT HELPERS
+========================================================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-muted{
+    color:#6b7280;
+}
+
+.text-primary{
+    color:#2563eb;
+}
+
+.text-success{
+    color:#16a34a;
+}
+
+.text-warning{
+    color:#ca8a04;
+}
+
+.text-danger{
+    color:#dc2626;
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1200px){
+
+    .app{
+        padding:30px;
+    }
+
+}
+
+@media(max-width:992px){
+
+    .controls{
+        max-width:100%;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .app{
+        padding:20px;
+    }
+
+    .controls{
+        gap:18px;
+        margin:30px auto;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .app{
+        padding:15px;
+    }
+
+}
+/* =====================
+   LIGHT MODE
+===================== */
+
+.app.light{
+
+    background:#eef3fb;
+
+    color:#1f2937;
+
+}
+
+/* =====================
+   DARK MODE
+===================== */
+
+.app.dark{
+
+    background:#111827;
+
+    color:white;
+
+}
+
+/* Cards */
+
+.app.dark .stat-card,
+.app.dark .task-card,
+.app.dark .column,
+.app.dark .search-box,
+.app.dark .add-task{
+
+    background:#1f2937;
+
+    color:white;
+
+}
+
+/* Inputs */
+
+.app.dark input,
+.app.dark textarea,
+.app.dark select{
+
+    background:#374151;
+
+    color:white;
+
+    border:1px solid #4b5563;
+
+}
+
+/* Empty State */
+
+.app.dark .empty-state{
+
+    color:#9ca3af;
+
+}
+
+/* Progress */
+
+.app.dark .progress-bar{
+
+    background:#374151;
+
+}
+/* ==========================
+   DARK MODE FIXES
+========================== */
+
+.dark {
+  background: #111827;
+  color: #f9fafb;
+}
+
+.dark p,
+.dark span,
+.dark label,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #f9fafb;
+}
+
+.dark .stat-card {
+  background: #1f2937;
+}
+
+.dark .column {
+  background: #1f2937;
+}
+
+.dark .task-card {
+  background: #273244;
+  color: white;
+}
+
+.dark .task-card h3,
+.dark .task-card p,
+.dark .task-card span {
+  color: white;
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #d1d5db;
+}
+
+.dark .search-container,
+.dark .add-task {
+  background: #1f2937;
+}
+
+.dark .empty-state h3,
+.dark .empty-state p {
+  color: #d1d5db;
+}
+
+.dark .progress-text{
+    color:white;
+}
+
+.dark .progress-section p{
+    color:white;
+}
+
+.dark .task-count{
+    color:white;
+}
+.dark .search-input{
+    background:#374151;
+    color:white;
+}
+
+.dark .search-input::placeholder{
+    color:#d1d5db;
+}
+.dark .task-input,
+.dark .priority-select{
+    background:#374151;
+    color:white;
+}
+
+.dark .task-input::placeholder{
+    color:#d1d5db;
+}
+.dark .empty-state{
+    color:white;
+}
+
+.dark .empty-icon{
+    opacity:1;
+}
+.dark .stat-info span{
+    color:#d1d5db;
+}
+
+.dark .stat-info h2{
+    color:white;
+}
+.theme-toggle{
+
+    position:fixed;
+
+    top:22px;
+    right:22px;
+
+    width:74px;
+    height:74px;
+
+    border-radius:50%;
+
+    background:#ffffff;
+
+    font-size:28px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.22);
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+.theme-toggle:hover{
+
+    transform:scale(1.12) rotate(15deg);
+
+}
+
+.dark .theme-toggle{
+
+    background:#2563eb;
+    color:white;
+
+}
