@@ -1,4 +1,4 @@
-# Task-Management-Board
+# Task Management Board
 A modern, responsive **React.js Task Management Board** that helps users organize, prioritize, and track their tasks using a clean Kanban-style interface. The application features drag-and-drop functionality, dark/light theme support, task filtering, search, progress tracking, and persistent storage using Local Storage.
 
 # Features
